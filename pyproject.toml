@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saxs-tools"
+dynamic = ["version"]
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { email = "spm82@cornell.edu", name = "Steve Meisburger" },
+]
+requires-python = ">= 3.11"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=6.0"]
+
+[project.urls]
+repository = "https://github.com/ando-lab/saxs-tools"
+
+[project.scripts]
+"saxs.version" = "saxs_tools.command_line.version:run"
+"saxs.emd" = "saxs_tools.command_line.emd:main"
+
+[tool.setuptools.dynamic]
+version = {file = "saxs_tools/VERSION"}
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.format]
+quote-style= "double"
+indent-style= "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "A", "PLC", "PLE", "PLW", "I"]
+ignore = ["E741", "F541"]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
