@@ -31,15 +31,23 @@ options:
   --qmax QMAX           Maximum q-value (default: inf)
 ```
 
+#### Example data
+
+Fit files from Crysol can be found on the SASBDB. Here's an excellent example from Urate Oxidase (https://www.sasbdb.org/data/SASDPQ4/).
+
+```bash
+# download Ureate Oxidase fit file from the SASBDB
+curl -O https://www.sasbdb.org/media/fitting_files/SASDPQ4_fit2.fit 
+```
+
 #### Example 1: simple output
 
 ```bash
-# download example dataset from the SASBDB
-curl -O https://www.sasbdb.org/media/fitting_files/SASDPQ4_fit2.fit 
-
-# Estimate the EMD
+# Estimate the EMD. Second argument is the maximum dimension (Å)
 saxs.emd SASDPQ4_fit2.fit 92
 ```
+
+Output:
 
 ```
 emd (Å): 0.1737, x2: 40.6738, x2_ift: 2.6933
@@ -52,6 +60,8 @@ emd (Å): 0.1737, x2: 40.6738, x2_ift: 2.6933
 # --qmin and --qmax to trim the q-range
 saxs.emd SASDPQ4_fit2.fit 92 -v --qmin 0.02 --qmax 0.25
 ```
+
+Output:
 
 ```
 Loading model and data profiles from: SASDPQ4_fit2.fit
