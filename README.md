@@ -33,7 +33,7 @@ options:
 
 #### Example data
 
-Fit files from Crysol can be found on the SASBDB. Here's an excellent example from Urate Oxidase (https://www.sasbdb.org/data/SASDPQ4/).
+Many fit files have been posted to the SASBDB. Let's grab the Crysol fit to [SASDPQ4](https://www.sasbdb.org/data/SASDPQ4/), an excellent Urate Oxidase example from the [round-robin paper](https://doi.org/10.1107/S2059798322009184).
 
 ```bash
 # download Ureate Oxidase fit file from the SASBDB
