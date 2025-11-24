@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1103348486.svg)](https://doi.org/10.5281/zenodo.17704310)
+
 # saxs-tools
 
 Simple command-line tools for SAXS data processing and analysis
