@@ -2,6 +2,16 @@
 
 Simple command-line tools for SAXS data processing and analysis
 
+## Versions
+
+- `0.0.1` -- First public release. Pip-installable. Includes `saxs.emd`.
+
+## Installation
+
+```bash
+pip install git+https://github.com/ando-lab/saxs-tools.git
+```
+
 ## Tool Chest
 
 ### `saxs.emd`
